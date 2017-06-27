@@ -1,0 +1,31 @@
+import java.util.Random;
+
+/**
+ * Created by Suraj kakode on 6/27/2017.
+ */
+ 
+ // Class to generate the random number with expected results 
+public class RandomNum {
+
+    public static String getRandomNum(String name)
+    {
+        //utility class to generate random number
+        Random random= new Random();
+        
+        //creating random number from 6 to 15
+        int randomNum= random.nextInt(10)+6;
+        
+        //returning output as per the requirement. ex: "rahul 11"
+        return "\""+name+" "+randomNum+"\"";
+    }
+
+    public static void main(String[] args) {
+        
+        //Testing the expected output 100 times by calling the function  
+        for (int i=0;i<100;i++)
+        System.out.println(RandomNum.getRandomNum("suraj"));
+
+
+    }
+
+}
